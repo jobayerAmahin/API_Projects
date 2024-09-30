@@ -1,7 +1,7 @@
 const people=[
     {name:'Jaber',job:'nonGov',sallary:30000,id:1,address:{
         main:'Metsälinnunreitti 2'
-    }},
+    },hobby:['football','walking']},
     {name:'Kaber',job:'nonGov',sallary:140000,id:2,address:{
         main:'Metsälinnunreitti 2',
         current:'Espoo'
@@ -9,15 +9,15 @@ const people=[
     {name:'Aaber',job:'Gov',sallary:20000,id:3,address:{
         main:'Metsälinnunreitti 3',
         current:'Helsinki'
-    }},
+    },hobby:['walking','singing']},
     {name:'Maber',job:'nonGov',sallary:50000,id:4,address:{
         main:'Metsälinnunreitti',
         current:'Espoo'
-    }},
+    },hobby:['fishing','cycling']},
     {name:'Saber',job:'Gov',sallary:35000,id:5,address:{
         main:'Metsälinnunreitti 4',
        
-    }},
+    },hobby:['dancing','drawing']},
     {name:'Taber',job:'Gov',sallary:25000,id:6,address:{
         main:'Metsälinnunreitti 6',
         current:'Vantaa'
@@ -49,6 +49,7 @@ const matchId=(id)=>{
     
         <p>Person Job- ${getId.job}</p>
         <p>Person Sallary- ${getId.sallary}</p>
+        <p>Person Hobby- ${(getId?.hobby?.map((h)=>h)||'N/A')}</p>
         <p>Person Address- ${(getId?.address?.current||"N/A")}</p>
 
      </div>
