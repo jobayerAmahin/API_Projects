@@ -58,4 +58,16 @@ const matchId=(id)=>{
     console.log(personInfo)
 }
 
+document.getElementById('denBtn').addEventListener('click',()=>{
+    const newBtn=document.getElementById('btnContainer')
+    newBtn.innerHTML=`
+    <button class='btn' ${this.addEventListener('click',checkClick,false)}>Adopt</button>
+    `
+})
+
+const checkClick=(evt)=>{
+    evt.target.innerText="Adopted"
+    evt.stopImmediatePropagation()
+}
+
 showName(people)
